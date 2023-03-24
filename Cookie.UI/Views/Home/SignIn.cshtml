@@ -1,0 +1,32 @@
+﻿@model UserSignInModel
+@{
+    ViewData["Title"] = "SignIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto d-block">
+            <form asp-controller="Home" asp-action="SignIn" method="POST">
+
+                <div class="mb-3">
+                    <input type="text" asp-for="@Model.UserName" class="form-control" />
+                </div> 
+                
+                <div class="mb-3">
+                    <input type="text" asp-for="@Model.Password" class="form-control" />
+                </div>
+
+               <div class="mb-3">
+                   <button type="submit" class="btn btn-success">
+                       Giriş yap
+                   </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
